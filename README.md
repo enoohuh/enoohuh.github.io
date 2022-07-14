@@ -4,7 +4,7 @@
 * Compared model performance on how well we can predict wine quality ratings from a list of objective features of the wine (pH level, residual sugar, alcohol content, etc.)
 * Compared the performance of 4 different models: ordinary least squares, ridge regression, lasso regression, and elastic net.
 * Utilized cross validation to choose the tuning parameters in order to improve model performance.
-![](https://github.com/enoohuh/Portfolio/blob/main/images/github%20image%201.pdf)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/github%20image%201%20(2).jpg)
 
 # Classifying which emails are spam
 * Utilized logistic regression to classify emails in order to predict whether they are spam emails or real emails.
