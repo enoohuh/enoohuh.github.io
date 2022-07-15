@@ -7,7 +7,9 @@
 ![](https://github.com/enoohuh/Portfolio/blob/main/images/github%20image%201%20(2).jpg)
 
 # How has the pandemic affected New York City's public transportation ridership?
-![](https://github.com/enoohuh/Portfolio/blob/main/images/github%20image%20nyc%20transportation.jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%201.jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%202.jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%203.jpg)
 
 # Classifying which emails are spam
 * Utilized logistic regression to classify emails in order to predict whether they are spam emails or real emails.
