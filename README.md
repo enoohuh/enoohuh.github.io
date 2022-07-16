@@ -4,7 +4,8 @@
 * Utilized different regression models to predict wine quality ratings from a list of objective features of the wine (pH level, residual sugar, alcohol content, etc.)
 * Compared the performance of 4 different models: ordinary least squares, ridge regression, lasso regression, and elastic net.
 * Utilized cross validation to choose the tuning parameters in order to improve model performance.
-![](https://github.com/enoohuh/Portfolio/blob/main/images/github%20image%201%20(2).jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/wine%20image%201.jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/wine%20image%202.jpg)
 
 # How has the pandemic affected New York City's public transportation ridership?
 * Compared two main public transportations: subway and bus. How many people relied on these public transportations before the pandemic? How many of them still use public transportation during the pandemic?
