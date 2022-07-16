@@ -16,7 +16,7 @@
 # Trump Tweets
 * Created data visualizations from Donald Trump's tweets.
 * During the 2016 presidential campaign, it was theorized that Donald Trump's tweets from Android devices were written by him personally, and the tweets from iPhones were from his staff. I plotted the number of tweets from each device and the time when they were usually posted to see if our data supported this claim.
-* Utilized VADER, a sentiment analysis algorithm to observe the difference of polarity scores of certain words like "nytimes" and "fox".
+* Utilized VADER, a sentiment analysis algorithm to observe the difference of polarity scores of certain words used in Trump's tweets like "nytimes" and "fox".
 ![](https://github.com/enoohuh/Portfolio/blob/main/images/github%20trump%20tweets%20image.jpg)
 
 # Classifying which emails are spam
