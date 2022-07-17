@@ -7,6 +7,9 @@
 ![](https://github.com/enoohuh/Portfolio/blob/main/images/wine%20image%201.jpg)
 ![](https://github.com/enoohuh/Portfolio/blob/main/images/wine%20image%202.jpg)
 
+# Estimating the _causal effect_ of a childcare treatment on the cognitive test scores of premature children
+![](https://github.com/enoohuh/Portfolio/blob/main/images/causal%20inference%20image.jpg)
+
 # How has the pandemic affected New York City's public transportation ridership?
 * Compared two main public transportations: subway and bus. How many people relied on these public transportations before the pandemic? How many of them still use public transportation during the pandemic?
 * Plotted the number of COVID-19 cases against public transportation ridership. Does a spike in COVID-19 cases directly correlate with less people riding public transportation?
