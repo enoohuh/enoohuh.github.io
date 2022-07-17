@@ -8,6 +8,9 @@
 ![](https://github.com/enoohuh/Portfolio/blob/main/images/wine%20image%202.jpg)
 
 # Estimating the _causal effect_ of a childcare treatment on the cognitive test scores of premature children
+* The Infant Health and Development Program (IHDP) was an experiment treating low-birth-weight, premature infants with intensive high-quality childcare from a trained provider. I estimated the causal effect of this program on the children's cognitive test scores.
+* Devised a propensity score model to control for confounders (child's birth weight, whether or not the mother smoked during pregnancy, her age, race, etc.)
+* Calculated and compared the estimate of the average treatment effect (ATE) and the simple difference in mean outcomes (SDO)
 ![](https://github.com/enoohuh/Portfolio/blob/main/images/causal%20inference%20image.jpg)
 
 # How has the pandemic affected New York City's public transportation ridership?
