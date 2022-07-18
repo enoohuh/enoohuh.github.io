@@ -11,7 +11,7 @@
 * The Infant Health and Development Program (IHDP) was an experiment treating low-birth-weight, premature infants with intensive high-quality childcare from a trained provider. I estimated the causal effect of this program on the children's cognitive test scores.
 * Devised a propensity score model to control for confounders (child's birth weight, whether or not the mother smoked during pregnancy, her age, race, etc.)
 * Calculated and compared the estimate of the average treatment effect (ATE) and the simple difference in mean outcomes (SDO)
-![](https://github.com/enoohuh/Portfolio/blob/main/images/causal%20inference%20image.jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/causal%20inference%20image%20corrected.jpg)
 
 # How has the pandemic affected New York City's public transportation ridership?
 * Compared two main public transportations: subway and bus. How many people relied on these public transportations before the pandemic? How many of them still use public transportation during the pandemic?
