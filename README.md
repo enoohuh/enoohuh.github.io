@@ -28,6 +28,8 @@
 
 # Classifying which emails are spam
 * Utilized logistic regression to classify emails in order to predict whether they are spam emails or real emails.
+* Feature engineered a list of the most common words used in both spam emails and real emails.
+* The model obtained a 93.5% accuracy on test data.
 
 # Can we use campaign finance data to predict who wins a primary election?
 * Utilized a random forest classifier on campaign finance data and endorsement data to predict which candidates will win a primary election.
