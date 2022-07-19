@@ -1,5 +1,3 @@
-# Enoque's Portfolio
-
 # Can we predict how good a wine tastes?
 * Utilized different regression models to predict wine quality ratings from a list of objective features of the wine (pH level, residual sugar, alcohol content, etc.)
 * Compared the performance of 4 different models: ordinary least squares, ridge regression, lasso regression, and elastic net.
