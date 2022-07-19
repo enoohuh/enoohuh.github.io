@@ -1,4 +1,4 @@
-# Portfolio
+# Enoque's Portfolio
 
 # Can we predict how good a wine tastes?
 * Utilized different regression models to predict wine quality ratings from a list of objective features of the wine (pH level, residual sugar, alcohol content, etc.)
@@ -13,12 +13,10 @@
 * Calculated and compared the estimate of the average treatment effect (ATE) and the simple difference in mean outcomes (SDO)
 ![](https://github.com/enoohuh/Portfolio/blob/main/images/causal%20inference%20image%20corrected.jpg)
 
-# How has the pandemic affected New York City's public transportation ridership?
-* Compared two main public transportations: subway and bus. How many people relied on these public transportations before the pandemic? How many of them still use public transportation during the pandemic?
-* Plotted the number of COVID-19 cases against public transportation ridership. Does a spike in COVID-19 cases directly correlate with less people riding public transportation?
-![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%201.jpg)
-![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%202.jpg)
-![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%203.jpg)
+# Can we use campaign data to predict who wins a primary election?
+* Combined two datasets to create a more complete representation of each candidate. The first dataset was FiveThirtyEight's 2018 Primary Election dataset which contained endorsement data. The second dataset was the Federal Election Commission's dataset which contained candidates' finance data (individual contributions to the campaign, total disbursements, etc.)
+* Utilized a random forest classifier model to predict who wins a primary election based on these combined features.
+![](https://github.com/enoohuh/Portfolio/blob/main/images/Election%20proj%20image.jpg)
 
 # Trump Tweets
 * Created data visualizations from Donald Trump's tweets.
@@ -30,6 +28,12 @@
 * Utilized logistic regression to classify emails in order to predict whether they are spam emails or real emails.
 * Feature engineered a list of the most common words used in both spam emails and real emails.
 * The model obtained a 93.5% accuracy on test data.
+![](https://github.com/enoohuh/Portfolio/blob/main/images/Spam%20Ham%20proj%20image.jpg)
 
-# Can we use campaign finance data to predict who wins a primary election?
-* Utilized a random forest classifier on campaign finance data and endorsement data to predict which candidates will win a primary election.
+# How has the pandemic affected New York City's public transportation ridership?
+* Compared two main public transportations: subway and bus. How many people relied on these public transportations before the pandemic? How many of them still use public transportation during the pandemic?
+* Plotted the number of COVID-19 cases against public transportation ridership. Does a spike in COVID-19 cases directly correlate with less people riding public transportation?
+![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%201.jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%202.jpg)
+![](https://github.com/enoohuh/Portfolio/blob/main/images/nyc%20page%203.jpg)
+
