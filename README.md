@@ -16,7 +16,7 @@
 # Can we use campaign data to predict who wins a primary election?
 * Combined two datasets to create a more complete representation of each candidate. The first dataset was FiveThirtyEight's 2018 Primary Election dataset which contained endorsement data. The second dataset was the Federal Election Commission's dataset which contained candidates' finance data (individual contributions to the campaign, total disbursements, etc.)
 * Utilized a random forest classifier model to predict who wins a primary election based on these combined features.
-![](/images/Election%20proj%20image%20copy.jpg)
+![](/images/endorsement%20image.jpg)
 ![](/images/Election%20proj%20image.jpg)
 
 # Trump Tweets
