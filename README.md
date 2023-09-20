@@ -1,9 +1,23 @@
 # Enoque's Data Science Portfolio
 
 # Can we predict how good a wine tastes?
-* Utilized different regression models to predict wine quality ratings from a list of objective features of the wine (pH level, residual sugar, alcohol content, etc.)
-* Compared the performance of 4 different models: ordinary least squares, ridge regression, lasso regression, and elastic net.
-* Utilized cross validation to choose the tuning parameters in order to improve model performance.
+### Introduction
+* Wine preferences are very subjective as people tend to like different things. But is there a way to create an objectively good tasting wine with the help of machine learning? In this project, we aimed to find out what exactly makes wine taste good, as we analyzed the similarities and differences of 1600 wines. Objective features of the wine included things like: fixed acidity, residual sugars, pH level, alcohol content, etc. Each wine was rated by three different wine experts and the median of the ratings was used as the wine score which ranged from 0 (very bad) to 10 (excellent).
+### Methods
+* Four different regression models were used to compare results: ordinary least squares, ridge regression, lasso regression, and elastic net. Cross-validation was used for choosing the tuning parameters of all models except ordinary least squares. All code was written in Python, and packages used were: numpy and pandas for data manipulation, seaborn for data visualization, and scikit-learn for model training and cross-validation.
+### Model Creation
+#### Ordinary Least Squares
+* We want to identify the coefficients of a linear model relating wine quality to different features of the wine. Our predictors are all of the features of the wine, and our response variable is the subjective rating that each wine was given by the wine experts. The complete list of 11 features includes: fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulfates, and alcohol. The model was split 70/30 as train/test data.
+#### Ridge Regression
+* To optimize our ridge regression model, we utilized the default leave-one-out cross validation, and inputted a list of $\alpha$ values $[0.1, 0.11, 0.12, ..., 2]$ where higher values of $\alpha$ correspond to stronger regularization. The final $\alpha$ value was 0.21 as shown by the graph below. We see that when $\alpha=0.21$, the mean squared error is the lowest, and as $\alpha$ increases past 0.21, the mean squared error increases rapidly. This shows that some regularization can help model performance, while too much regularization can reduce model performance.
+#### Lasso Regression
+* For the lasso model, 5-fold cross-validation was used. We inputted a list of $\alpha$ values $[0.001, 0.002, 0.003, ..., 1]$ and the amount of penalization chosen was $\alpha=0.001$. We observe that in contrast to ridge regression, lasso regression gets rid of some features completely, as residual sugar as well as density are now both 0. This is because lasso (L1 regularization) is considered a more strict shrinkage operation, and leads to sparser models.
+#### Elastic Net
+* In an elastic net model, there are 2 tuning parameters we need to consider when using cross-validation: the L1 ratio and $\alpha$. 
+L1 ratio = 0 is ridge regression
+L1 ratio = 1 is lasso regression.
+Our model's L1 ratio chosen by cross-validation was 1, so in this case our elastic net model is the same as a lasso regression model.
+### Results
 ![](/images/wine%201.jpg)
 ![](/images/Wine%20image%202.jpg)
 
