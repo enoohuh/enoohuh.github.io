@@ -56,8 +56,10 @@
 ### Results
 * The models were surprisingly accurate in predicting who will win a primary election. Both the random forest model and the decision tree model performed similarly in accuracy on test data. In order to get a more complete summary of our models' performances, we also looked at precision and recall which gives us a better understanding of the true positives in our predictions.
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/model%20results.png) 
-<a href="#top">Back to top</a>
 
+<br>
+
+<a href="#top">Back to top</a>
 # Project 3: The impact of COVID-19 on New York City's Public Transportation System <a name="transportation"></a>
 ### Introduction
 * This project aimed to summarize and create a comprehensive report of the impact of COVID-19 on New York City's public transportation system. I focused on two main public transportation systems that millions of New Yorkers rely on daily: the subway and the bus. Some questions I explored were: "How has COVID-19 affected public transportation ridership?" and "What are factors that correlate with ridership numbers slowly going back to normal?"
@@ -86,9 +88,10 @@ order are:
 5. Fulton Street
 
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/map.png)
+
+<br>
+
 <a href="#top">Back to top</a>
-
-
 # Project 4: Analyzing Player Sentiment on Fortnite's Changes to the XP System <a name="fortnite"></a>
 ### Introduction
 * Fortnite’s recent changes to how players can get XP (experience points) was received with mixed opinions. With the purchase of the Battle Pass (that costs 950 V-Bucks or around $8), players receive in-game rewards according to their levels. Players have a chance to win all of the Battle Pass rewards by reaching level 200 by the end of the season. One way to ensure you progress through all the levels and receive all of the rewards is by completing quests. Until recently, players were given quests that could be completed throughout the season, whenever they wanted. But with the changes to the Weekly Quests, players now have exactly one week to complete these quests before they expire forever. This has caused a lot of backlash in the community and has left casual players feeling like they're missing out on a lot of XP and potential rewards, and that there’s not enough time to complete their weekly quests.
@@ -109,7 +112,7 @@ order are:
 * Since this is a Reddit discussion thread, it’s expected that most comments will have high subjectivity scores.
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_sent.png)
 ### Data Visualizations
-![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_words.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_words_enhanced.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_image_sentiment_1.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_sentiment_2.png)
 ### Player Insights
@@ -128,14 +131,17 @@ order are:
 
 ### Closing Thoughts
 * We were able to engage in deep discussion and took a step forward in understanding player sentiment.  This project was very interesting and gave me a lot of new insights in better understanding people's different experiences and how they play Fortnite. I hope to bring my knowledge and passion for gaming, user research, and data analysis to the next opportunity that arises. Thanks for reading!
+
+<br>
+
 <a href="#top">Back to top</a>
-
-
 # Full Code
 ## Project 1 Code  <a name="code1"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/wine_proj_full.png)
-<a href="#top">Back to top</a>
 
+<br>
+
+<a href="#top">Back to top</a>
 ## Project 2 Code  <a name="code2"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-01.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-02.png)
@@ -146,12 +152,14 @@ order are:
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-07.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-08.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-09.png)
-<a href="#top">Back to top</a>
+<br>
 
+<a href="#top">Back to top</a>
 ## Project 3 Code  <a name="code3"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/NYC%20Subway%20Bus%20and%20Covid-19-1-1.png)
-<a href="#top">Back to top</a>
+<br>
 
+<a href="#top">Back to top</a>
 ## Project 4 Code  <a name="code4"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-1.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-2.png)
@@ -161,5 +169,4 @@ order are:
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-6.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-7.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-8.png)
-
 <a href="#top">Back to top</a>
