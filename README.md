@@ -1,9 +1,9 @@
 # Enoque's Data Science Portfolio
 ## Topics Overview
-* Project 1. [Regression](#wine)
-* Project 2. [Machine Learning and Predictive Modeling](#election)
-* Project 3. [Data Visualization](#transportation)
-* Project 4. [Sentiment Analysis and Web Scraping](#fortnite)
+* Project 1. [Regression](#wine) ([code](#code1))
+* Project 2. [Machine Learning and Predictive Modeling](#election) ([code](#code2))
+* Project 3. [Data Visualization](#transportation) ([code](#code3))
+* Project 4. [Sentiment Analysis and Web Scraping](#fortnite) ([code](#code4))
 
 # Project 1: What Exactly Makes Wine Taste Good? <a name="wine"></a>
 ### Introduction
@@ -106,7 +106,9 @@ order are:
 1. Polarity score: a score that ranges from -1 (which indicates negative sentiment) to 1 (which indicates positive sentiment).
 2. Subjectivity score: a score that ranges from 0 (factual) to 1 (subjective). Subjective sentences generally refer to personal opinion, emotion, or judgment.
 * Since this is a Reddit discussion thread, it’s expected that most comments will have high subjectivity scores.
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_sent.png)
 ### Data Visualizations
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_words.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_image_sentiment_1.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/fortnite_sentiment_2.png)
 ### Player Insights
@@ -126,4 +128,33 @@ order are:
 ### Closing Thoughts
 * We were able to engage in deep discussion and took a step forward in understanding player sentiment.  This project was very interesting and gave me a lot of new insights in better understanding people's different experiences and how they play Fortnite. I hope to bring my knowledge and passion for gaming, user research, and data analysis to the next opportunity that arises. Thanks for reading!
 
+
+
+# Full Code
+## Project 1 Code  <a name="code1"></a>
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/wine_proj_full.png)
+
+## Project 2 Code  <a name="code2"></a>
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-01.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-02.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-03.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-04.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-05.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-06.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-07.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-08.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-09.png)
+
+## Project 3 Code  <a name="code3"></a>
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/NYC%20Subway%20Bus%20and%20Covid-19-1-1.png)
+
+## Project 4 Code  <a name="code4"></a>
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-1.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-2.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-3.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-4.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-5.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-6.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-7.png)
+![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-8.png)
 
