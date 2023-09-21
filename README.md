@@ -32,6 +32,7 @@
 ![](/images/wine%201.jpg)
 #### Comparing Models on Test Data
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/all%20models.png)
+<a href="#top">Back to top</a>
 
 # Project 2: Can We Use Machine Learning to Predict Primary Election Outcomes? <a name="election"></a>
 ### Introduction
@@ -55,7 +56,7 @@
 ### Results
 * The models were surprisingly accurate in predicting who will win a primary election. Both the random forest model and the decision tree model performed similarly in accuracy on test data. In order to get a more complete summary of our models' performances, we also looked at precision and recall which gives us a better understanding of the true positives in our predictions.
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/model%20results.png) 
-
+<a href="#top">Back to top</a>
 
 # Project 3: The impact of COVID-19 on New York City's Public Transportation System <a name="transportation"></a>
 ### Introduction
@@ -85,7 +86,7 @@ order are:
 5. Fulton Street
 
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/map.png)
-
+<a href="#top">Back to top</a>
 
 
 # Project 4: Analyzing Player Sentiment on Fortnite's Changes to the XP System <a name="fortnite"></a>
@@ -127,12 +128,13 @@ order are:
 
 ### Closing Thoughts
 * We were able to engage in deep discussion and took a step forward in understanding player sentiment.  This project was very interesting and gave me a lot of new insights in better understanding people's different experiences and how they play Fortnite. I hope to bring my knowledge and passion for gaming, user research, and data analysis to the next opportunity that arises. Thanks for reading!
-
+<a href="#top">Back to top</a>
 
 
 # Full Code
 ## Project 1 Code  <a name="code1"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/wine_proj_full.png)
+<a href="#top">Back to top</a>
 
 ## Project 2 Code  <a name="code2"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-01.png)
@@ -144,9 +146,11 @@ order are:
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-07.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-08.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/DATA_102_Final_Project_Code-2-09.png)
+<a href="#top">Back to top</a>
 
 ## Project 3 Code  <a name="code3"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/NYC%20Subway%20Bus%20and%20Covid-19-1-1.png)
+<a href="#top">Back to top</a>
 
 ## Project 4 Code  <a name="code4"></a>
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-1.png)
@@ -158,3 +162,4 @@ order are:
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-7.png)
 ![](https://github.com/enoohuh/enoohuh.github.io/blob/main/images/Fortnite%20Project-8.png)
 
+<a href="#top">Back to top</a>
