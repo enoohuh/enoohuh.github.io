@@ -1,9 +1,9 @@
 # Enoque's Data Science Portfolio
 ## Topics Overview
-* Project 1. [Regression](#wine) ([code](#code1))
-* Project 2. [Machine Learning and Predictive Modeling](#election) ([code](#code2))
-* Project 3. [Data Visualization](#transportation) ([code](#code3))
-* Project 4. [Sentiment Analysis and Web Scraping](#fortnite) ([code](#code4))
+* [Project 1.](#wine) Regression ([code](#code1))
+* [Project 2.](#election) Machine Learning and Predictive Modeling ([code](#code2))
+* [Project 3.](#transportation) Data Visualization ([code](#code3))
+* [Project 4.](#fortnite) Sentiment Analysis and Web Scraping ([code](#code4))
 
 # Project 1: What Exactly Makes Wine Taste Good? <a name="wine"></a>
 ### Introduction
