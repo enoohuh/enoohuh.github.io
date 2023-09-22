@@ -17,13 +17,13 @@
 #### 1. Ordinary Least Squares
 * We want to identify the coefficients of a linear model relating wine quality to different features of the wine. Our predictors are all of the features of the wine, and our response variable is the subjective rating that each wine was given by the wine experts. The complete list of 11 features includes: fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulfates, and alcohol. The model was split 70/30 as train/test data.
 #### 2. Ridge Regression
-* To optimize our ridge regression model, we utilized the default leave-one-out cross validation, and inputted a list of $$\alpha$$ values $[0.1, 0.11, 0.12, ..., 2]$ where higher values of $\alpha$ correspond to stronger regularization. The final $\alpha$ value was 0.21 as shown by the graph below. We see that when $\alpha=0.21$, the mean squared error is the lowest, and as $\alpha$ increases past 0.21, the mean squared error increases rapidly. This shows that some regularization can help model performance, while too much regularization can reduce model performance.
+* To optimize our ridge regression model, we utilized the default leave-one-out cross validation, and inputted a list of ![](https://latex.codecogs.com/gif.latex?%5Calpha) values [0.1, 0.11, 0.12, ..., 2] where higher values of ![](https://latex.codecogs.com/gif.latex?%5Calpha) correspond to stronger regularization. The final ![](https://latex.codecogs.com/gif.latex?%5Calpha) value was 0.21 as shown by the graph below. We see that when ![](https://latex.codecogs.com/gif.latex?%5Calpha%3D0.21), the mean squared error is the lowest, and as ![](https://latex.codecogs.com/gif.latex?%5Calpha) increases past 0.21, the mean squared error increases rapidly. This shows that some regularization can help model performance, while too much regularization can reduce model performance.
 ![](/images/ridge.png)
 #### 3. Lasso Regression
-* For the lasso model, 5-fold cross-validation was used. We inputted a list of $\alpha$ values $[0.001, 0.002, 0.003, ..., 1]$ and the amount of penalization chosen was $\alpha=0.001$. We observe that in contrast to ridge regression, lasso regression gets rid of some features completely, as residual sugar as well as density are now both 0. This is because lasso (L1 regularization) is considered a more strict shrinkage operation, and leads to sparser models.
+* For the lasso model, 5-fold cross-validation was used. We inputted a list of ![](https://latex.codecogs.com/gif.latex?%5Calpha) values [0.001, 0.002, 0.003, ..., 1] and the amount of penalization chosen was [$\alpha=0.001$](https://latex.codecogs.com/gif.latex?%5Calpha%3D0.001). We observe that in contrast to ridge regression, lasso regression gets rid of some features completely, as residual sugar as well as density are now both 0. This is because lasso (L1 regularization) is considered a more strict shrinkage operation, and leads to sparser models.
 ![](/images/lasso.png)
 #### 4. Elastic Net
-* In an elastic net model, there are 2 tuning parameters we need to consider when using cross-validation: the L1 ratio and $\alpha$. 
+* In an elastic net model, there are 2 tuning parameters we need to consider when using cross-validation: the L1 ratio and ![](https://latex.codecogs.com/gif.latex?%5Calpha). 
 * L1 ratio = 0 is ridge regression
 * L1 ratio = 1 is lasso regression.
 * Our model's L1 ratio chosen by cross-validation was 1, so in this case our elastic net model is the same as a lasso regression model.
@@ -32,8 +32,8 @@
 ![](/images/wine%201.jpg)
 #### Comparing Models on Test Data
 ![](/images/all%20models.png)
-<a href="#top">Back to top</a>
 
+<a href="#top">Back to top</a>
 # Project 2: Can We Use Machine Learning to Predict Primary Election Outcomes? <a name="election"></a>
 ### Introduction
 * In this study, I explored the question of: "Can we use data to predict the results of a primary election?". I aimed to create a more complete representation of each candidate by feature-engineering and combining two data sets: FiveThirtyEight's Election Candidates data set and the Federal Election Commision's (FEC) campaign finance data set. By doing so, we were able to take advantage of many useful features like their demographics, finances, and endorsements.
