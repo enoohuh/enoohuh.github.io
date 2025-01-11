@@ -15,12 +15,17 @@
 * In the world of competitive Fortnite, there are different types of information that are essential to survival in high-pressure situations. The constant changes in the game make it extremely hard for players to memorize all of the necessary information that could potentially be the difference between life and death, or even earning life-changing money from tournaments. Some examples include: weapon information, vending machine locations, "choppas" or helicopter locations, and NPC (non-playable character) locations.
 ###### Weapon Stats
 * With more than 100 weapons currently in the game, memorizing all of this information is not feasible. Stats such as: damage per second (DPS), structural damage, reload time, magazine size, etc. are all valuable pieces of information that are sometimes necessary to know when playing at a competitive level.
+
 ![](/images/weapon_stats.jpg)
+
 ###### Vending Machine and Choppa Locations
 * Vending Machines are spread around the Fortnite map, and they provide players the opportunity to buy heals (medkits, bandages, shield) by using farmed materials (wood, brick, metal) as a form of currency. Knowing where these vending machines spawn is crucial for certain situational scenarios such as: dying in storm, and having no heals but surplus materials.
 * Choppas, or helicopters, provide players with extremely fast mobility. It can serve as a tool to rotate to a different part of the map, follow enemies, escape the storm, or disengage from fights.
+![](/images/vendingmachine_choppa.jpg)
 ###### NPC Boss Locations
 * NPC Bosses spawn at certain points of interest, and drop "mythic" items once they are defeated. Mythic items are one-of-a-kind weapons or utilities that spawn only once every match. Obtaining these items can be difficult, as many players compete for them. Obtaining these items grant a significant competitive advantage over other players, and thus, knowing the NPC locations is extremely important for competitive gameplay.
+
+![](/images/npcs.jpg)
 
 ### 2. Methods
 #### 2.1 Web-Scraping the Data / Data Cleaning
