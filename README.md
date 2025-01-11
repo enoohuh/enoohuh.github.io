@@ -50,6 +50,7 @@ efficiency. Model parameters were set to their automatically assigned values, ex
 ### Introduction
 * Wine preferences are very subjective as people tend to like different things. But is there a way to create an objectively good tasting wine with the help of machine learning? In this project, I aimed to find out what exactly makes wine taste good by analyzing the similarities and differences of 1600 wines. Objective features of the wine included things like: fixed acidity, residual sugars, pH level, alcohol content, etc. Each wine was rated by three different wine experts and the median of the ratings was used as the wine score which ranged from 0 (very bad) to 10 (excellent).
 ![](/images/wine_image.jpeg)
+
 ### Methods
 * Four different regression models were used to compare results: ordinary least squares, ridge regression, lasso regression, and elastic net.
 * Cross-validation was used for choosing the tuning parameters of all models except ordinary least squares.
