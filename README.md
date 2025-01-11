@@ -1,11 +1,52 @@
 # Enoque's Data Science Portfolio
 ## Topics Overview
-* [Project 1.](#wine) Regression ([code](#code1))
-* [Project 2.](#election) Machine Learning and Predictive Modeling ([code](#code2))
-* [Project 3.](#transportation) Data Visualization ([code](#code3))
-* [Project 4.](#fortnite) Sentiment Analysis and Web Scraping ([code](#code4))
+* [Project 1.](#llm) Gaming GPT — AI Assistant for Fortnite
+* [Project 2.](#wine) Regression ([code](#code2))
+* [Project 3.](#election) Machine Learning and Predictive Modeling ([code](#code3))
+* [Project 4.](#transportation) Data Visualization ([code](#code4))
+* [Project 5.](#fortnite) Sentiment Analysis and Web Scraping ([code](#code5))
 
-# Project 1: What Exactly Makes Wine Taste Good? <a name="wine"></a>
+# Project 1: A Fine-Tuned GPT Model For Competitive Gaming <a name="llm"></a>
+### 1. Introduction
+* With the rise of large language models (LLMs) in the recent years, many fields have incorporated AI in order to improve and automate their services. However, there’s one field in particular where LLMs have not been incorporated in any significant way: ***gaming***. This project aims to explore a potentially useful application of LLMs in gaming: an AI assistant that can answers in-game related questions to elevate the player experience. 
+#### 1.1 What Kind of Data Would Help Players?
+* In the world of competitive Fortnite, there are different types of information that are essential to survival in high-pressure situations. The constant changes in the game make it extremely hard for players to memorize all of the necessary information that could potentially be the difference between life and death, or even earning life-changing money from tournaments. Some examples include: weapon information, vending machine locations, "choppas" or helicopter locations, and NPC (non-playable character) locations.
+###### Weapon Stats
+* With more than 100 weapons currently in the game, memorizing all of this information is not feasible. Stats such as: damage per second (DPS), structural damage, reload time, magazine size, etc. are all valuable pieces of information that are sometimes necessary to know when playing at a competitive level.
+###### Vending Machine and Choppa Locations
+* Vending Machines are spread around the Fortnite map, and they provide players the opportunity to buy heals (medkits, bandages, shield) by using farmed materials (wood, brick, metal) as a form of currency. Knowing where these vending machines spawn is crucial for certain situational scenarios such as: dying in storm, and having no heals but surplus materials.
+* Choppas, or helicopters, provide players with extremely fast mobility. It can serve as a tool to rotate to a different part of the map, follow enemies, escape the storm, or disengage from fights.
+###### NPC Boss Locations
+* NPC Bosses spawn at certain points of interest, and drop "mythic" items once they are defeated. Mythic items are one-of-a-kind weapons or utilities that spawn only once every match. Obtaining these items can be difficult, as many players compete for them. Obtaining these items grant a significant competitive advantage over other players, and thus, knowing the NPC locations is extremely important for competitive gameplay.
+
+### 2. Methods
+#### 2.1 Web-Scraping the Data / Data Cleaning
+* In order to fine-tune the model, relevant data had to be scraped from the internet. All data except from weapon data was directly obtained from three main websites: oneesports.gg, dexerto.com, and dotesports. Weapon data was obtained from a well-known gaming analytics website called blitz.gg.
+* The websites–from where most of the data were collected–follow a standard article format, with important information spread around the article. Data from these websites were then manually collected and organized before preparation forf ine-tuning. Weapon data, on the other hand, was extremely hard to work with, as it was completely unstructured. Weapon information went through multiple iterations of data cleaning, from redacting irrelevant information, changing data types, to finally being structured into a Pandas dataframe.
+
+#### 2.2 Data Preparation for Fine-Tuning
+* Fine-tuning an OpenAI GPT model requires specific formatting of data. The data should follow the format of: context, prompt, and response. In addition to these formatting specifications, OpenAI recommends users to provide at least one hundred prompt-response pairs as the minimum amount of sufficient data for proper fine-tuning. To convert all the fine-tuning data into the proper format, the initial idea was to automate the data transformation by looping through all the data. However, this was not used as it would not capture the variety of prompts used by real users in terms of syntax. Instead, ChatGPT was used with the following prompt: ”Based on the provided data, generate 150 prompt response pairs with a lot of variety in wording.” The same context prompt was used for all pairs: ”You are a helpful assistant for Fortnite players, only providing answers to Fortnite-related questions.” Utilizing ChatGPT solved the problem of repetitive wording, and structured the data with the appropriate formatting for fine-tuning.
+
+#### 2.3 Model Creation
+* The chosen GPT model for fine-tuning was OpenAI’s gpt-4o-mini, which OpenAI describes as a balanced model that combines both performance and cost
+efficiency. Model parameters were set to their automatically assigned values, except for n_epochs. The model was trained on 34,386 tokens, a batch size of 1, a learning rate of 1.8, and 8 epochs. An epoch describes the number of times the model sees the entire dataset. Too few epochs could lead to underfitting, while too many epochs could lead to overfitting. An epoch of 3 was the automatically chosen
+ value—presumably because of the relatively small size of the training data—but was later changed to 8. The fine-tuned model had a training loss of 0.0505, as shown in the figure below.
+
+### Results
+*  In order for the fine-tuned model to be considered helpful in the context of a gaming assistant, the most important metric is ***response accuracy***. Players should be able to receive reliable information about loot, NPCs, weapons, and locations. **The worst scenario in this context is model hallucination**, in other words, receiving factually-incorrect information from the AI assistant.
+*  An important parameter that can influence the quality of output is model temperature. This parameter ranges from 0 to 1, where lower values mean less randomness in response, while higher values mean more randomness in response. In the context of gaming, a lower temperature could be beneficial, as deterministic responses could result in more accurate output. Figure 2 shows that the fine-tuned model is indeed more knowledgeable about Fortnite in comparison to the same, but not fine-tuned model.
+
+
+### Limitations
+* Even though the fine-tuned model seems to be more knowledgeable about Fortnite, it is still not perfect. Even with a model temperature of 0.00, which in theory should prevent hallucinations, the fine-tuned model outputs factually incorrect information with confidence, as show in Figure 3 below. The model incorrectly named the point of interest (Ice Spice’s Crib should have been Ice Isle), its location on the map (center of the map should have been northwest corner of the map), and the weapons’ names (Drum Gun and Snowball Launcher should have been Assault Rifle and Grappler).
+* Some mistakes have little impact on gameplay. For instance, providing the wrong name for a point of interest may not significantly affect the user’s experience. However, more critical errors, such as mislabeling weapons or giving incorrect locations, can be detrimental. For example, telling a user that a location is in the center of the map when it is actually in the northwest corner could lead to confusion and frustration, ultimately hindering gameplay.
+
+### Next Steps
+* A gaming AI assistant would certainly elevate users’ gaming experiences to the next level. However, we see that fine-tuning an LLM model comes with its own set of challenges. Next token prediction machine learning models such as the GPT model suffer from hallucinations. Before this fine-tuned LLM can be deployed and ultimately become a Voice AI Assistant, the model has to be fine-tuned even further to prevent hallucinations. Potential solutions include: embedding data into a searchable database, or incorporating a retrieval-augmented generation (RAG) architecture. Until these challenges are solved, the incorporation of LLMs in the field of gaming will remain a mere promising concept with no end product.
+
+<a href="#top">Back to top</a>
+
+# Project 2: What Exactly Makes Wine Taste Good? <a name="wine"></a>
 ### Introduction
 * Wine preferences are very subjective as people tend to like different things. But is there a way to create an objectively good tasting wine with the help of machine learning? In this project, I aimed to find out what exactly makes wine taste good by analyzing the similarities and differences of 1600 wines. Objective features of the wine included things like: fixed acidity, residual sugars, pH level, alcohol content, etc. Each wine was rated by three different wine experts and the median of the ratings was used as the wine score which ranged from 0 (very bad) to 10 (excellent).
 ![](/images/wine_image.jpeg)
@@ -34,7 +75,7 @@
 ![](/images/all%20models.png)
 
 <a href="#top">Back to top</a>
-# Project 2: Can We Use Machine Learning to Predict Primary Election Outcomes? <a name="election"></a>
+# Project 3: Can We Use Machine Learning to Predict Primary Election Outcomes? <a name="election"></a>
 ### Introduction
 * In this study, I explored the question of: "Can we use data to predict the results of a primary election?". I aimed to create a more complete representation of each candidate by feature-engineering and combining two data sets: FiveThirtyEight's Election Candidates data set and the Federal Election Commision's (FEC) campaign finance data set. By doing so, we were able to take advantage of many useful features like their demographics, finances, and endorsements.
 * All code was written in Python and packages used included: numpy and pandas for data manipulation, seaborn and matplotlib for data visualization and scitkit-learn for machine learning.
@@ -60,7 +101,7 @@
 <br>
 
 <a href="#top">Back to top</a>
-# Project 3: The impact of COVID-19 on New York City's Public Transportation System <a name="transportation"></a>
+# Project 4: The impact of COVID-19 on New York City's Public Transportation System <a name="transportation"></a>
 ### Introduction
 * This project aimed to summarize and create a comprehensive report of the impact of COVID-19 on New York City's public transportation system. I focused on two main public transportation systems that millions of New Yorkers rely on daily: the subway and the bus. Some questions I explored were: "How has COVID-19 affected public transportation ridership?" and "What are factors that correlate with ridership numbers slowly going back to normal?"
 ![](/images/subway_cover.jpg)
@@ -92,7 +133,7 @@ order are:
 <br>
 
 <a href="#top">Back to top</a>
-# Project 4: Analyzing Player Sentiment on Fortnite's Changes to the XP System <a name="fortnite"></a>
+# Project 5: Analyzing Player Sentiment on Fortnite's Changes to the XP System <a name="fortnite"></a>
 ### Introduction
 * Fortnite’s recent changes to how players can get XP (experience points) was received with mixed opinions. With the purchase of the Battle Pass (that costs 950 V-Bucks or around $8), players receive in-game rewards according to their levels. Players have a chance to win all of the Battle Pass rewards by reaching level 200 by the end of the season. One way to ensure you progress through all the levels and receive all of the rewards is by completing quests. Until recently, players were given quests that could be completed throughout the season, whenever they wanted. But with the changes to the Weekly Quests, players now have exactly one week to complete these quests before they expire forever. This has caused a lot of backlash in the community and has left casual players feeling like they're missing out on a lot of XP and potential rewards, and that there’s not enough time to complete their weekly quests.
 ![](/images/fortnite_cover.png)
@@ -136,13 +177,13 @@ order are:
 
 <a href="#top">Back to top</a>
 # Full Code
-## Project 1 Code  <a name="code1"></a>
+## Project 2 Code  <a name="code2"></a>
 ![](/images/wine_proj_full.png)
 
 <br>
 
 <a href="#top">Back to top</a>
-## Project 2 Code  <a name="code2"></a>
+## Project 3 Code  <a name="code3"></a>
 ![](/images/DATA_102_Final_Project_Code-2-01.png)
 ![](/images/DATA_102_Final_Project_Code-2-02.png)
 ![](/images/DATA_102_Final_Project_Code-2-03.png)
@@ -155,12 +196,12 @@ order are:
 <br>
 
 <a href="#top">Back to top</a>
-## Project 3 Code  <a name="code3"></a>
+## Project 4 Code  <a name="code4"></a>
 ![](/images/NYC%20Subway%20Bus%20and%20Covid-19-1-1.png)
 <br>
 
 <a href="#top">Back to top</a>
-## Project 4 Code  <a name="code4"></a>
+## Project 5 Code  <a name="code5"></a>
 ![](/images/Fortnite%20Project-1.png)
 ![](/images/Fortnite%20Project-2.png)
 ![](/images/Fortnite%20Project-3.png)
