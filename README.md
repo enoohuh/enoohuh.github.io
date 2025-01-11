@@ -30,7 +30,7 @@
 ### 2. Methods
 #### 2.1 Web-Scraping the Data / Data Cleaning
 * In order to fine-tune the model, relevant data had to be scraped from the internet. All data except from weapon data was directly obtained from three main websites: oneesports.gg, dexerto.com, and dotesports. Weapon data was obtained from a well-known gaming analytics website called blitz.gg.
-* The websites–from where most of the data were collected–follow a standard article format, with important information spread around the article. Data from these websites were then manually collected and organized before preparation forf ine-tuning. Weapon data, on the other hand, was extremely hard to work with, as it was completely unstructured. Weapon information went through multiple iterations of data cleaning, from redacting irrelevant information, changing data types, to finally being structured into a Pandas dataframe.
+* The websites–from where most of the data were collected–follow a standard article format, with important information spread around the article. Data from these websites were then manually collected and organized before preparation for fine-tuning. Weapon data, on the other hand, was extremely hard to work with, as it was completely unstructured. Weapon information went through multiple iterations of data cleaning, from redacting irrelevant information, changing data types, to finally being structured into a Pandas dataframe.
 ![](/images/weapon_pandas.jpg)
 <p align="center">
   <i>Raw data to Pandas DataFrame.</i>
@@ -63,7 +63,7 @@ efficiency. Model parameters were set to their automatically assigned values, ex
 </p>
 
 ### Limitations
-* Even though the fine-tuned model seems to be more knowledgeable about Fortnite, it is still not perfect. Even with a model temperature of 0.00, which in theory should prevent hallucinations, the fine-tuned model outputs factually incorrect information with confidence, as show in Figure 3 below. The model incorrectly named the point of interest (Ice Spice’s Crib should have been Ice Isle), its location on the map (center of the map should have been northwest corner of the map), and the weapons’ names (Drum Gun and Snowball Launcher should have been Assault Rifle and Grappler).
+* Even though the fine-tuned model seems to be more knowledgeable about Fortnite, it is still not perfect. Even with a model temperature of 0.00, which in theory should prevent hallucinations, the fine-tuned model outputs factually incorrect information with confidence, as show in Figure 3 below. **The model incorrectly named the point of interest** (Ice Spice’s Crib should have been Ice Isle), **its location on the map** (center of the map should have been northwest corner of the map), **and the weapons’ names** (Drum Gun and Snowball Launcher should have been Assault Rifle and Grappler).
 
 ![](/images/hallucination.png)
 <p align="center">
