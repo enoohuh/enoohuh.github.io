@@ -13,16 +13,16 @@
 
 #### 1.1 What Kind of Data Would Help Players?
 * In the world of competitive Fortnite, there are different types of information that are essential to survival in high-pressure situations. The constant changes in the game make it extremely hard for players to memorize all of the necessary information that could potentially be the difference between life and death, or even earning life-changing money from tournaments. Some examples include: weapon information, vending machine locations, "choppas" or helicopter locations, and NPC (non-playable character) locations.
-###### Weapon Stats
+##### Weapon Stats
 * With more than 100 weapons currently in the game, memorizing all of this information is not feasible. Stats such as: damage per second (DPS), structural damage, reload time, magazine size, etc. are all valuable pieces of information that are sometimes necessary to know when playing at a competitive level.
 
 ![](/images/weapon_stats.jpg)
 
-###### Vending Machine and Choppa Locations
+##### Vending Machine and Choppa Locations
 * Vending Machines are spread around the Fortnite map, and they provide players the opportunity to buy heals (medkits, bandages, shield) by using farmed materials (wood, brick, metal) as a form of currency. Knowing where these vending machines spawn is crucial for certain situational scenarios such as: dying in storm, and having no heals but surplus materials.
 * Choppas, or helicopters, provide players with extremely fast mobility. It can serve as a tool to rotate to a different part of the map, follow enemies, escape the storm, or disengage from fights.
 ![](/images/vendingmachine_choppa.jpg)
-###### NPC Boss Locations
+##### NPC Boss Locations
 * NPC Bosses spawn at certain points of interest, and drop "mythic" items once they are defeated. Mythic items are one-of-a-kind weapons or utilities that spawn only once every match. Obtaining these items can be difficult, as many players compete for them. Obtaining these items grant a significant competitive advantage over other players, and thus, knowing the NPC locations is extremely important for competitive gameplay.
 
 ![](/images/npcs.jpg)
@@ -32,6 +32,9 @@
 * In order to fine-tune the model, relevant data had to be scraped from the internet. All data except from weapon data was directly obtained from three main websites: oneesports.gg, dexerto.com, and dotesports. Weapon data was obtained from a well-known gaming analytics website called blitz.gg.
 * The websites–from where most of the data were collected–follow a standard article format, with important information spread around the article. Data from these websites were then manually collected and organized before preparation forf ine-tuning. Weapon data, on the other hand, was extremely hard to work with, as it was completely unstructured. Weapon information went through multiple iterations of data cleaning, from redacting irrelevant information, changing data types, to finally being structured into a Pandas dataframe.
 ![](/images/weapon_pandas.jpg)
+<p align="center">
+  <i>Raw data to Pandas DataFrame.</i>
+</p>
 
 #### 2.2 Data Preparation for Fine-Tuning
 * Fine-tuning an OpenAI GPT model requires specific formatting of data. The data should follow the format of: context, prompt, and response. In addition to these formatting specifications, OpenAI recommends users to provide at least one hundred prompt-response pairs as the minimum amount of sufficient data for proper fine-tuning. To convert all the fine-tuning data into the proper format, the initial idea was to automate the data transformation by looping through all the data. However, this was not used as it would not capture the variety of prompts used by real users in terms of syntax. Instead, ChatGPT was used with the following prompt: ”Based on the provided data, generate 150 prompt response pairs with a lot of variety in wording.” The same context prompt was used for all pairs: ”You are a helpful assistant for Fortnite players, only providing answers to Fortnite-related questions.” Utilizing ChatGPT solved the problem of repetitive wording, and structured the data with the appropriate formatting for fine-tuning.
@@ -40,21 +43,33 @@
 * The chosen GPT model for fine-tuning was OpenAI’s gpt-4o-mini, which OpenAI describes as a balanced model that combines both performance and cost
 efficiency. Model parameters were set to their automatically assigned values, except for n_epochs. The model was trained on 34,386 tokens, a batch size of 1, a learning rate of 1.8, and 8 epochs. An epoch describes the number of times the model sees the entire dataset. Too few epochs could lead to underfitting, while too many epochs could lead to overfitting. An epoch of 3 was the automatically chosen value—presumably because of the relatively small size of the training data—but was later changed to 8. The fine-tuned model had a training loss of 0.0505, as shown in the figure below.
 ![](/images/trainingloss.png)
+<p align="center">
+  <i>Training loss of fine-tuned model.</i>
+</p>
 
 ### Results
 * In order for the fine-tuned model to be considered helpful in the context of a gaming assistant, the most important metric is ***response accuracy***. Players should be able to receive reliable information about loot, NPCs, weapons, and locations. **The worst scenario in this context is model hallucination**, in other words, receiving factually-incorrect information from the AI assistant.
 * An important parameter that can influence the quality of output is model temperature. This parameter ranges from 0 to 1, where lower values mean less randomness in response, while higher values mean more randomness in response. In the context of gaming, a lower temperature could be beneficial, as deterministic responses could result in more accurate output.
+
 ![](/images/model_temp.png)
 
-* **The figure below shows that the fine-tuned model is indeed more knowledgeable about Fortnite in comparison to the same, but not fine-tuned model.**
+  
+
+* **The figure below shows that the fine-tuned model is indeed more knowledgeable about Fortnite in comparison to its regular counterpart.**
 
 ![](/images/modelcomparison.png)
-
+<p align="center">
+  <i>Response of the regular model (left) and factually-correct response of the fine-tuned model (right), with a temperature of 0.30.</i>
+</p>
 
 ### Limitations
 * Even though the fine-tuned model seems to be more knowledgeable about Fortnite, it is still not perfect. Even with a model temperature of 0.00, which in theory should prevent hallucinations, the fine-tuned model outputs factually incorrect information with confidence, as show in Figure 3 below. The model incorrectly named the point of interest (Ice Spice’s Crib should have been Ice Isle), its location on the map (center of the map should have been northwest corner of the map), and the weapons’ names (Drum Gun and Snowball Launcher should have been Assault Rifle and Grappler).
 
 ![](/images/hallucination.png)
+<p align="center">
+  <i>Factually-incorrect response of the fine-tuned model, with a temperature of 0.00.</i>
+</p>
+
 
 * Some mistakes have little impact on gameplay. For instance, providing the wrong name for a point of interest may not significantly affect the user’s experience. However, more critical errors, such as mislabeling weapons or giving incorrect locations, can be detrimental. For example, telling a user that a location is in the center of the map when it is actually in the northwest corner could lead to confusion and frustration, ultimately hindering gameplay.
 
