@@ -165,23 +165,32 @@ order are:
 
 ![](/images/map.png)
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
 <a href="#top">Back to top</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 # Project 5: Analyzing Player Sentiment on Fortnite's Changes to the XP System <a name="fortnite"></a>
 ### Introduction
 * Fortnite’s recent changes to how players can get XP (experience points) was received with mixed opinions. With the purchase of the Battle Pass (that costs 950 V-Bucks or around $8), players receive in-game rewards according to their levels. Players have a chance to win all of the Battle Pass rewards by reaching level 200 by the end of the season. One way to ensure you progress through all the levels and receive all of the rewards is by completing quests. Until recently, players were given quests that could be completed throughout the season, whenever they wanted. But with the changes to the Weekly Quests, players now have exactly one week to complete these quests before they expire forever. This has caused a lot of backlash in the community and has left casual players feeling like they're missing out on a lot of XP and potential rewards, and that there’s not enough time to complete their weekly quests.
